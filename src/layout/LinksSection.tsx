@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Input from "./Input";
-import ShortenLink from "./ShortenLink";
+import Input from "../components/Input";
+import ShortenLink from "../components/ShortenLink";
 
 interface ShortenUrlsProps {
   longUrl: string;
@@ -10,6 +10,8 @@ interface ShortenUrlsProps {
 const LinksSection = () => {
   const initialState = localStorage.getItem("shortenUrls");
   const [url, setUrl] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
   const [shortenUrls, setShortenUrls] = useState<ShortenUrlsProps[]>(
     initialState ? JSON.parse(initialState) : []
   );
@@ -34,8 +36,12 @@ const LinksSection = () => {
           setUrl={setUrl}
           shortenUrls={shortenUrls}
           setShortenUrls={setShortenUrls}
+          error={error}
+          setError={setError}
+          setIsLoading={setIsLoading}
         />
       </div>
+      {isLoading && <div className="loading fade-in">{"Loading..."}</div>}
       {shortenUrls[0] && (
         <div className="shortenUrlsContainer">
           {shortenUrls.map((shortUrl, index) => (

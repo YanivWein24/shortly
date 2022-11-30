@@ -13,11 +13,12 @@
       font-size: 2rem;
       font-weight: 700;
       line-height: 1.11;
-      margin-top: 16rem;
+      margin-top: 17rem;
     }
     p {
       color: $GrayViolet;
       margin: 1rem auto 2rem;
+      line-height: 26px;
     }
     button {
       margin: 0 auto;
@@ -26,9 +27,9 @@
 
   img {
     position: absolute;
-    width: 383px;
-    height: 251px;
-    right: -50px;
+    width: 410px;
+    height: 271px;
+    right: -80px;
     z-index: -1;
   }
 }

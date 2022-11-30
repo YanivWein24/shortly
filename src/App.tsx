@@ -1,6 +1,6 @@
 import "./App.scss";
-import Hero from "./components/Hero";
-import LinksSection from "./components/LinksSection";
+import Hero from "./layout/Hero";
+import LinksSection from "./layout/LinksSection";
 import Header from "./layout/Header";
 
 const App = () => (

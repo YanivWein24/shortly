@@ -22,7 +22,7 @@
 .navbar {
   z-index: 2;
   position: absolute;
-  top: 7rem;
+  top: 6rem;
   width: 85%;
   left: 7.5%;
   background-color: $DarkViolet;
@@ -30,10 +30,10 @@
 
   border-radius: 0.6rem;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   p {
     color: #fff;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 700;
     cursor: pointer;
   }
@@ -44,7 +44,7 @@
     opacity: 0.3;
   }
   button {
-    font-size: 22px;
+    font-size: 18px;
     width: 90%;
   }
 }

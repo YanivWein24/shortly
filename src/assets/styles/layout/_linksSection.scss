@@ -5,25 +5,53 @@
   min-height: 15rem;
   margin: 0;
   position: relative;
+
+  .loading {
+    font-size: 18px;
+    font-weight: 700;
+    color: $DarkViolet;
+    padding-top: 8.5rem;
+    padding-left: 1rem;
+    text-align: center;
+  }
   .linksContainer {
+    transition: all 0.3s ease;
     width: 90%;
     position: absolute;
-    top: -95px;
+    top: -70px;
     left: 5%;
   }
 
   .shortenUrlsContainer {
-    padding: 100px 0 20px;
+    padding: 150px 0 20px;
+  }
+
+  .loading + .shortenUrlsContainer {
+    // reduce the top padding when the loading messages appear
+    padding: 0px 0 20px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .linksSection {
-    margin: 5rem 0;
+    margin: 10rem 0;
     .linksContainer {
       width: 80%;
       top: -65px;
       left: 10%;
+    }
+
+    .shortenUrlsContainer {
+      padding: 100px 0 20px;
+    }
+
+    .loading + .shortenUrlsContainer {
+      // reduce the top padding when the loading messages appear
+      padding: 10px 0 20px;
+    }
+
+    .loading {
+      padding-top: 4.5rem;
     }
   }
 }

@@ -1,5 +1,5 @@
 import HeroSVG from "../assets/svgs/illustration-working.svg";
-import Button from "./Button";
+import Button from "../components/Button";
 
 const Hero = () => (
   <div className="hero flex">

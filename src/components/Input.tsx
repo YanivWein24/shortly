@@ -11,11 +11,29 @@ interface InputProps {
   setUrl: React.Dispatch<React.SetStateAction<string>>;
   shortenUrls: ShortenUrlsProps[];
   setShortenUrls: React.Dispatch<React.SetStateAction<ShortenUrlsProps[]>>;
+  error: string;
+  setError: React.Dispatch<React.SetStateAction<string>>;
+  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Input = ({ url, setUrl, shortenUrls, setShortenUrls }: InputProps) => {
-  const shortLink = async () => {
+const Input = ({
+  url,
+  setUrl,
+  shortenUrls,
+  setShortenUrls,
+  setError,
+  setIsLoading,
+  error,
+}: InputProps) => {
+  const addShortLink = async () => {
+    if (url === "") {
+      setError("Please add a link");
+      return;
+    }
+    setIsLoading(true);
     const data = await useFetch(url);
+    setIsLoading(false);
+    data.error ? setError(data.error) : setError("");
     const newUrl: ShortenUrlsProps = {
       longUrl: data.result.original_link,
       shortUrl: data.result.full_short_link,
@@ -27,17 +45,19 @@ const Input = ({ url, setUrl, shortenUrls, setShortenUrls }: InputProps) => {
   return (
     <div className="inputContainer flex">
       <input
+        className={error && "isError"}
         type="text"
         placeholder="Shorten a link here..."
         value={url}
         onChange={(event) => setUrl(event.target.value)}
-        onKeyDown={(event) => event.key === "Enter" && shortLink()}
+        onKeyDown={(event) => event.key === "Enter" && addShortLink()}
       />
       <Button
-        onClick={() => shortLink()}
+        onClick={() => addShortLink()}
         borderRadius="0.4rem"
         text="Shorten it!"
       />
+      {error !== "" && <div className="error fade-in">{error}</div>}
     </div>
   );
 };
