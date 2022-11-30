@@ -1,0 +1,49 @@
+@use "../utils/" as *;
+
+.inputContainer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+  gap: 1.5rem;
+  padding: 1.5rem 1.2rem 1rem;
+  background-color: $DarkViolet;
+  background-image: url(https://user-images.githubusercontent.com/97472180/204813406-6ed3df5f-d9e5-452c-8264-b45e706f179a.svg);
+  background-size: cover;
+
+  input {
+    border-radius: 0.4rem;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+  }
+
+  input {
+    width: 100%;
+  }
+  button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .inputContainer {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2rem 2.5rem;
+    background-image: url(https://user-images.githubusercontent.com/97472180/204816379-44134048-7774-4c7a-ade9-32d818227efb.svg);
+
+    input {
+      width: 80%;
+      height: 3rem;
+      padding: 0.5rem 1em;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20%;
+      height: 3rem;
+    }
+  }
+}
