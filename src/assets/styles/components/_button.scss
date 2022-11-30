@@ -1,0 +1,26 @@
+@use "../utils/" as *;
+
+button {
+  background-color: $Cyan;
+  cursor: pointer;
+  padding: 0.6rem 1.6rem;
+  color: #fff;
+  transition: 0.3s ease;
+  font-weight: 700;
+
+  &:active {
+    filter: brightness(110%);
+  }
+}
+
+@media (min-width: 768px) {
+  button {
+    &:active {
+      filter: brightness(100%);
+    }
+
+    &:hover {
+      filter: brightness(110%);
+    }
+  }
+}

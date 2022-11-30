@@ -7,7 +7,7 @@ interface HamburgerProps {
 const Hamburger = ({ isActive, setIsActive, setFadeOut }: HamburgerProps) => {
   const fadeOutNavbar = () => {
     setFadeOut(true);
-    setTimeout(() => (setFadeOut(false), setIsActive(false)), 500); // eslint-disable-line
+    setTimeout(() => (setFadeOut(false), setIsActive(false)), 300); // eslint-disable-line
   };
 
   return (
