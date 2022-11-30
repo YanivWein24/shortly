@@ -1,5 +1,11 @@
 @use "./assets/styles/utils" as *;
 
 .App {
-  color: $DarkViolet;
+  padding: 0 2rem;
+}
+
+@media screen and (min-width: 728px) {
+  .App {
+    padding: 0 8rem;
+  }
 }
