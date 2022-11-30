@@ -13,6 +13,14 @@ button {
   }
 }
 
+.copied {
+  background-color: $DarkViolet;
+}
+
+.deleteButton {
+  background-color: rgb(232, 40, 40);
+}
+
 @media (min-width: 768px) {
   button {
     &:active {

@@ -1,0 +1,39 @@
+@use "../utils/" as *;
+
+.linksSection {
+  background-color: $Background;
+  min-height: 15rem;
+  margin: 0;
+  position: relative;
+  .linksContainer {
+    width: 90%;
+    position: absolute;
+    top: -95px;
+    left: 5%;
+  }
+
+  .shortenUrlsContainer {
+    padding: 100px 0 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .linksSection {
+    margin: 5rem 0;
+    .linksContainer {
+      width: 80%;
+      top: -65px;
+      left: 10%;
+    }
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  .linksSection {
+    margin: 14rem 0;
+    .linksContainer {
+      width: 75%;
+      left: 12.4%;
+    }
+  }
+}

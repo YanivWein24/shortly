@@ -1,6 +1,8 @@
 @use "../utils" as *;
 
 .hero {
+  padding: 0 1.5rem;
+  margin-bottom: 8rem;
   position: relative;
   flex-direction: column;
   .getStarted {
@@ -26,25 +28,26 @@
     position: absolute;
     width: 383px;
     height: 251px;
-    right: -28%;
+    right: -50px;
     z-index: -1;
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
+    padding: 0 8rem;
     flex-direction: row-reverse;
     img {
       position: absolute;
       width: 650px;
       height: 410px;
-      right: -15%;
+      right: -100px;
       top: -10%;
     }
     .getStarted {
       text-align: left;
       margin-right: auto;
-      width: 50%;
+      width: 500px;
       h1 {
         font-size: 3.5rem;
         font-weight: 700;
@@ -53,6 +56,19 @@
       p {
         line-height: 1.5;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  .hero {
+    padding: 0 14rem;
+
+    img {
+      width: 700px;
+      height: 440px;
+      right: -100px;
+      top: -10%;
     }
   }
 }
