@@ -3,16 +3,21 @@
 .linksSection {
   background-color: $Background;
   min-height: 15rem;
-  margin: 0;
   position: relative;
 
-  .loading {
-    font-size: 18px;
-    font-weight: 700;
-    color: $DarkViolet;
-    padding-top: 8.5rem;
-    padding-left: 1rem;
-    text-align: center;
+  .loadingContainer {
+    position: relative;
+
+    .loading {
+      position: absolute;
+      bottom: -170px;
+      text-align: center;
+      left: 39%;
+      font-size: 18px;
+      font-weight: 700;
+      color: $DarkViolet;
+      z-index: 20;
+    }
   }
   .linksContainer {
     transition: all 0.3s ease;
@@ -23,18 +28,13 @@
   }
 
   .shortenUrlsContainer {
-    padding: 150px 0 20px;
-  }
-
-  .loading + .shortenUrlsContainer {
-    // reduce the top padding when the loading messages appear
-    padding: 0px 0 20px;
+    padding: 160px 0 20px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .linksSection {
-    margin: 10rem 0;
+    margin: 10rem 0 0;
     .linksContainer {
       width: 80%;
       top: -65px;
@@ -42,23 +42,22 @@
     }
 
     .shortenUrlsContainer {
-      padding: 100px 0 20px;
+      padding: 120px 0 20px;
     }
 
-    .loading + .shortenUrlsContainer {
-      // reduce the top padding when the loading messages appear
-      padding: 10px 0 20px;
-    }
-
-    .loading {
-      padding-top: 4.5rem;
+    .loadingContainer {
+      .loading {
+        font-size: 20px;
+        bottom: -130px;
+        left: 45%;
+      }
     }
   }
 }
 
 @media screen and (min-width: 1640px) {
   .linksSection {
-    margin: 14rem 0;
+    margin: 14rem 0 0;
     .linksContainer {
       width: 75%;
       left: 12.4%;

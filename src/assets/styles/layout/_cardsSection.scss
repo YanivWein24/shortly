@@ -1,0 +1,72 @@
+@use "../utils/" as *;
+
+.cardsSection {
+  text-align: center;
+  background-color: $Background;
+  padding: 1rem 1.5rem 0;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: $VeryDarkViolet;
+  }
+
+  p {
+    margin: 1.7rem 0;
+    font-size: 16px;
+    line-height: 30px;
+    color: $GrayViolet;
+  }
+
+  .cardsContainer {
+    position: relative;
+    margin-top: 6rem;
+
+    .line {
+      width: 8px;
+      height: 80%;
+      background-color: $Cyan;
+      position: absolute;
+      top: 450px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cardsSection {
+    padding: 2rem 8rem 0;
+    h1 {
+      font-size: 36px;
+    }
+
+    .cardsContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    h1 + p {
+      width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card-1 {
+      margin-top: 2.5rem;
+    }
+    .card-2 {
+      margin-top: 5rem;
+    }
+    .cardsContainer {
+      position: relative;
+
+      .line {
+        width: 80%;
+        height: 8px;
+        background-color: $Cyan;
+        position: absolute;
+        top: 165px;
+      }
+    }
+  }
+}

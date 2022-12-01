@@ -1,0 +1,42 @@
+@use "../utils/" as *;
+
+.card {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  padding: 5rem 1rem 1rem;
+  margin-bottom: 6rem;
+  position: relative;
+  z-index: 2;
+  .ImageContainer {
+    background-color: $DarkViolet;
+    border-radius: 23rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    justify-content: center;
+    align-items: center;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 24px;
+    color: $VeryDarkViolet;
+  }
+  p {
+    margin: 1rem 0;
+    line-height: 25px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 5rem 1.2rem 1rem;
+    text-align: left;
+    width: 30%;
+    height: 270px;
+  }
+}

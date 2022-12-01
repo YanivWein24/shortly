@@ -41,7 +41,11 @@ const LinksSection = () => {
           setIsLoading={setIsLoading}
         />
       </div>
-      {isLoading && <div className="loading fade-in">{"Loading..."}</div>}
+      {isLoading && (
+        <div className="loadingContainer fade-in">
+          <div className="loading">Loading...</div>
+        </div>
+      )}
       {shortenUrls[0] && (
         <div className="shortenUrlsContainer">
           {shortenUrls.map((shortUrl, index) => (
