@@ -1,0 +1,30 @@
+@use "../utils/" as *;
+
+.cta {
+  background-image: url("https://user-images.githubusercontent.com/97472180/205053153-74c014f8-50d9-4b56-8b80-87dfd5eba2f2.svg");
+  background-color: $DarkViolet;
+  flex-direction: column;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 26px;
+  }
+  button {
+    width: 12rem;
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cta {
+    background-image: url("https://user-images.githubusercontent.com/97472180/205053160-b9d3a63d-c5c4-4a0e-b9d6-ca9da4abcb2f.svg");
+    height: 250px;
+    h1 {
+      font-size: 32px;
+    }
+  }
+}
