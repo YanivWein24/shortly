@@ -1,21 +1,21 @@
 import { useState } from "react";
+import { ShortenUrlsProps } from "../layout/LinksSection";
 import Button from "./Button";
 
-interface ShortenUrlsProps {
-  longUrl: string;
-  shortUrl: string;
-  deleteLink: (shortUrl: string) => void;
+interface ShortenLinksProps {
+  shortenLink: ShortenUrlsProps;
+  deleteLink: (id: number) => void;
 }
 
-const ShortenLink = ({ longUrl, shortUrl, deleteLink }: ShortenUrlsProps) => {
+const ShortenLink = ({ shortenLink, deleteLink }: ShortenLinksProps) => {
   const [copied, setCopied] = useState<boolean>(false);
 
   const handleClick = () => {
-    navigator.clipboard.writeText(shortUrl);
+    navigator.clipboard.writeText(shortenLink.shortUrl);
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
-    }, 1000);
+    }, 300);
   };
 
   const [deleted, setDeleted] = useState<boolean>(false);
@@ -24,7 +24,7 @@ const ShortenLink = ({ longUrl, shortUrl, deleteLink }: ShortenUrlsProps) => {
     setDeleted(true);
     setTimeout(() => {
       setDeleted(false);
-      deleteLink(shortUrl);
+      deleteLink(shortenLink.id);
     }, 1000);
   };
 
@@ -35,10 +35,10 @@ const ShortenLink = ({ longUrl, shortUrl, deleteLink }: ShortenUrlsProps) => {
       }`}
     >
       <div>
-        <p>{longUrl}</p>
+        <p>{shortenLink.longUrl}</p>
       </div>
       <div className="bottomLink">
-        <p>{shortUrl}</p>
+        <p>{shortenLink.shortUrl}</p>
         <Button
           borderRadius="0.4rem"
           text={copied ? "Copied!" : "Copy"}

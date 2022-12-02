@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import Input from "../components/Input";
 import ShortenLink from "../components/ShortenLink";
 
-interface ShortenUrlsProps {
+export interface ShortenUrlsProps {
   longUrl: string;
   shortUrl: string;
+  id: number;
 }
 
 const LinksSection = () => {
@@ -16,10 +17,8 @@ const LinksSection = () => {
     initialState ? JSON.parse(initialState) : []
   );
 
-  const deleteLink = (shortUrl: string) => {
-    const newArray = shortenUrls.filter(
-      (shortenUrl) => shortenUrl.shortUrl !== shortUrl
-    );
+  const deleteLink = (id: number) => {
+    const newArray = shortenUrls.filter((shortenUrl) => shortenUrl.id !== id);
     setShortenUrls(newArray);
   };
 
@@ -48,11 +47,12 @@ const LinksSection = () => {
       )}
       {shortenUrls[0] && (
         <div className="shortenUrlsContainer">
-          {shortenUrls.map((shortUrl, index) => (
+          {shortenUrls.map((shortenLink) => (
             <ShortenLink
-              key={index}
-              longUrl={shortUrl.longUrl}
-              shortUrl={shortUrl.shortUrl}
+              key={shortenLink.id}
+              shortenLink={shortenLink}
+              // longUrl={shortUrl.longUrl}
+              // shortUrl={shortUrl.shortUrl}
               deleteLink={deleteLink}
             />
           ))}

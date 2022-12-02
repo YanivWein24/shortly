@@ -1,10 +1,6 @@
 import useFetch from "../assets/hooks/useFetch";
+import { ShortenUrlsProps } from "../layout/LinksSection";
 import Button from "./Button";
-
-interface ShortenUrlsProps {
-  longUrl: string;
-  shortUrl: string;
-}
 
 interface InputProps {
   url: string;
@@ -37,6 +33,7 @@ const Input = ({
     const newUrl: ShortenUrlsProps = {
       longUrl: data.result.original_link,
       shortUrl: data.result.full_short_link,
+      id: shortenUrls.length + 1,
     };
     setShortenUrls([...shortenUrls, newUrl]);
     setUrl("");
