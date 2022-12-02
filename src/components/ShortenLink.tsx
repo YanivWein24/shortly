@@ -15,7 +15,7 @@ const ShortenLink = ({ shortenLink, deleteLink }: ShortenLinksProps) => {
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
-    }, 300);
+    }, 500);
   };
 
   const [deleted, setDeleted] = useState<boolean>(false);

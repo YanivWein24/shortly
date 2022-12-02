@@ -23,8 +23,7 @@ const LinksSection = () => {
   };
 
   useEffect(() => {
-    shortenUrls[0] &&
-      localStorage.setItem("shortenUrls", JSON.stringify(shortenUrls));
+    localStorage.setItem("shortenUrls", JSON.stringify(shortenUrls));
   }, [shortenUrls]);
 
   return (

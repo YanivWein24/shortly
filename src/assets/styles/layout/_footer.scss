@@ -1,0 +1,64 @@
+@use "../utils/" as *;
+
+.footer {
+  background-color: $VeryDarkViolet;
+  text-align: center;
+  padding: 3rem;
+
+  .row {
+    margin: 2rem 0 3rem;
+    .bold {
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      cursor: default;
+      &:hover {
+        color: #fff;
+      }
+    }
+    p {
+      color: $Gray;
+      font-size: 16px;
+      margin: 0.5rem auto;
+      width: max-content;
+      cursor: pointer;
+      transition: 0.3s ease;
+      &:hover {
+        color: $Cyan;
+      }
+    }
+  }
+
+  .socials {
+    img {
+      margin: 0 0.6rem;
+      cursor: pointer;
+      &:hover {
+        // add filter to change the images from white to cyan
+        filter: invert(28%) sepia(71%) saturate(6568%) hue-rotate(150deg)
+          brightness(100%) contrast(100%);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 4rem 8rem 2rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    .logoContainer {
+      width: 30%;
+    }
+    .row {
+      margin: 0;
+      .bold {
+        margin: 0 0 1.2rem;
+      }
+      p {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+}

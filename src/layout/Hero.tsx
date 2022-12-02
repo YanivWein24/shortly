@@ -12,7 +12,11 @@ const Hero = () => (
         Build your brand's recognition and get detailed insights on how your{" "}
         links are performing.
       </p>
-      <Button text="Get Started" borderRadius="2rem" />
+      <Button
+        text="Get Started"
+        borderRadius="2rem"
+        onClick={() => window.scrollTo({ top: 350, behavior: "smooth" })}
+      />
     </div>
   </div>
 );
