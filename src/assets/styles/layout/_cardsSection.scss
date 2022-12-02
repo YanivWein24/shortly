@@ -3,10 +3,10 @@
 .cardsSection {
   text-align: center;
   background-color: $Background;
-  padding: 1rem 1.5rem 0;
+  padding: 1rem 1.5rem 5rem;
 
   h1 {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
     color: $VeryDarkViolet;
   }
@@ -31,12 +31,16 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+
+    .card-2 {
+      margin: 5rem 0 0;
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
   .cardsSection {
-    padding: 2rem 8rem 0;
+    padding: 2rem 10rem 0;
     h1 {
       font-size: 36px;
     }

@@ -37,6 +37,11 @@
     padding: 5rem 1.2rem 1rem;
     text-align: left;
     width: 30%;
-    height: 270px;
+    height: max-content;
+  }
+  .ImageContainer {
+    position: relative;
+    margin-left: unset !important;
+    left: 8% !important;
   }
 }

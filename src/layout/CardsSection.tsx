@@ -1,7 +1,8 @@
-import Card, { CardProps } from "../components/Card";
+import Card from "../components/Card";
 import BrandRecognition from "../assets/svgs/icon-brand-recognition.svg";
 import DetailedRecords from "../assets/svgs/icon-detailed-records.svg";
 import FullyCustom from "../assets/svgs/icon-fully-customizable.svg";
+import { CardProps } from "../assets/types/CardProps";
 
 const cards: CardProps[] = [
   {

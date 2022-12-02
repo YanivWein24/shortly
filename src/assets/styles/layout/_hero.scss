@@ -36,21 +36,21 @@
 
 @media screen and (min-width: 768px) {
   .hero {
-    padding: 0 8rem;
+    padding: 0 10rem;
     flex-direction: row-reverse;
     img {
       position: absolute;
       width: 650px;
       height: 410px;
       right: -100px;
-      top: -10%;
+      top: -15%;
     }
     .getStarted {
       text-align: left;
       margin-right: auto;
       width: 500px;
       h1 {
-        font-size: 3.5rem;
+        font-size: 3.75rem;
         font-weight: 700;
         margin-top: 1rem;
       }
