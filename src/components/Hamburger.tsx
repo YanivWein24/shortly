@@ -1,8 +1,4 @@
-interface HamburgerProps {
-  isActive: boolean;
-  setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
-  setFadeOut: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import { HamburgerProps } from "../assets/types/HamburgerProps";
 
 const Hamburger = ({ isActive, setIsActive, setFadeOut }: HamburgerProps) => {
   const fadeOutNavbar = () => {

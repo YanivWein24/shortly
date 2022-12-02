@@ -1,9 +1,4 @@
-export interface CardProps {
-  header: string;
-  content: string;
-  image: string;
-  index: number;
-}
+import { CardProps } from "../assets/types/CardProps";
 
 const Card = ({ header, content, image, index }: CardProps) => (
   <div className={`card card-${index}`}>

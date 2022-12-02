@@ -1,11 +1,6 @@
 import { useState } from "react";
-import { ShortenUrlsProps } from "../layout/LinksSection";
+import { ShortenLinksProps } from "../assets/types/ShortenLinks";
 import Button from "./Button";
-
-interface ShortenLinksProps {
-  shortenLink: ShortenUrlsProps;
-  deleteLink: (id: number) => void;
-}
 
 const ShortenLink = ({ shortenLink, deleteLink }: ShortenLinksProps) => {
   const [copied, setCopied] = useState<boolean>(false);

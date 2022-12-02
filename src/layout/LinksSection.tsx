@@ -1,15 +1,10 @@
 import { useState, useEffect } from "react";
+import { ShortenUrlsProps } from "../assets/types/ShortenUrlProps";
 import Input from "../components/Input";
 import ShortenLink from "../components/ShortenLink";
 
-export interface ShortenUrlsProps {
-  longUrl: string;
-  shortUrl: string;
-  id: number;
-}
-
 const LinksSection = () => {
-  const initialState = localStorage.getItem("shortenUrls");
+  const initialState: string | null = localStorage.getItem("shortenUrls");
   const [url, setUrl] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
@@ -50,8 +45,6 @@ const LinksSection = () => {
             <ShortenLink
               key={shortenLink.id}
               shortenLink={shortenLink}
-              // longUrl={shortUrl.longUrl}
-              // shortUrl={shortUrl.shortUrl}
               deleteLink={deleteLink}
             />
           ))}

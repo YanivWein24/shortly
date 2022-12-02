@@ -1,16 +1,7 @@
 import useFetch from "../assets/hooks/useFetch";
-import { ShortenUrlsProps } from "../layout/LinksSection";
+import { InputProps } from "../assets/types/InputProps";
+import { ShortenUrlsProps } from "../assets/types/ShortenUrlProps";
 import Button from "./Button";
-
-interface InputProps {
-  url: string;
-  setUrl: React.Dispatch<React.SetStateAction<string>>;
-  shortenUrls: ShortenUrlsProps[];
-  setShortenUrls: React.Dispatch<React.SetStateAction<ShortenUrlsProps[]>>;
-  error: string;
-  setError: React.Dispatch<React.SetStateAction<string>>;
-  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
-}
 
 const Input = ({
   url,
