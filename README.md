@@ -22,6 +22,7 @@ Users should be able to:
 - Copy the shortened link to their clipboard in a single click
 - Receive an error message when the `form` is submitted if:
   - The `input` field is empty
+  - The given URL is invalid
 
 ## Where can i check this out?
 
