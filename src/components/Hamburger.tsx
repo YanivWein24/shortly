@@ -8,7 +8,7 @@ const Hamburger = ({ isActive, setIsActive, setFadeOut }: HamburgerProps) => {
 
   return (
     <button
-      className={`hamburger hamburger--collapse ${isActive && "is-active"}`}
+      className={`hamburger hamburger--stand ${isActive && "is-active"}`}
       type="button"
       onClick={() => (isActive === false ? setIsActive(true) : fadeOutNavbar())}
     >
