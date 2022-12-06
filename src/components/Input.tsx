@@ -24,7 +24,7 @@ const Input = ({
     const newUrl: ShortenUrlsProps = {
       longUrl: data.result.original_link,
       shortUrl: data.result.full_short_link,
-      id: shortenUrls.length + 1,
+      id: data.result.code,
     };
     setShortenUrls([...shortenUrls, newUrl]);
     setUrl("");
