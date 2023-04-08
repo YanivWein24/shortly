@@ -1,9 +1,6 @@
 # Shortly
 
-<br />
-<p align="center">
-<img src="https://user-images.githubusercontent.com/97472180/205404908-45e2cef9-c348-498d-99f7-6cbde01fcb77.png" height="250" width="720" alt="EmptyUserScreen" >
-<p/>
+![shortly-gif](https://user-images.githubusercontent.com/97472180/205455533-faa3ca83-3043-4bf3-9de9-9ee08acef7ec.gif)  
 
 <br />
 
